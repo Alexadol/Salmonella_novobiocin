@@ -5,7 +5,7 @@ Here we analyzed the novobiocin effect on S. enterica gene expression and tried 
 	This repository contains data and code which were used for analysis. Description of code files and their output files briefly summarized in Table 1.
 
 
-Methods
+	Methods
 	Data
 For our study, we used RNA-seq data obtained after incubation of S. enterica strain 14028S with various novobiocin concentrations (0, 100 and 500 μg/ml) at different time points (10, 20 and 60 min) [1].
 	Data Preprocessing
