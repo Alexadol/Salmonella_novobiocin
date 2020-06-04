@@ -1,14 +1,15 @@
 ## Analysis of differentially expressed genes in Salmonella enterica after novobiocin treatment
 
-Salmonella enterica is a bacterium known to cause salmonellosis. In enteric bacteria, DNA supercoiling is responsive to environmental conditions and different antibiotics can be used to relax supercoiling and alter the expression of supercoiling-sensitive genes. However, S. enterica shows significant resistance to novobiocin antibiotic and relatively small variability of supercoiling response.\
+*Salmonella enterica* is a bacterium known to cause salmonellosis. In enteric bacteria, DNA supercoiling is responsive to environmental conditions and different antibiotics can be used to relax supercoiling and alter the expression of supercoiling-sensitive genes. However, S. enterica shows significant resistance to **novobiocin** antibiotic and relatively small variability of supercoiling response.\
 Here we analyzed the novobiocin effect on S. enterica gene expression and tried to reveal different mechanisms of S. enterica antibiotic resistance and transcription-supercoiling coupling.\
-	This repository contains data and code which were used for analysis. Description of code files and their output files briefly summarized in Table 1.
+	This repository contains data and code which were used for analysis. Description of code files and their output files briefly summarized in the **Table 1**.
 
+
+## Data
+
+For our study, we used RNA-seq data obtained after incubation of *Salmonella enterica* strain **14028S**with various novobiocin concentrations (**0, 100** and **500** μg/ml) at different time points (**10, 20** and **60** min) [1].
 
 ## Methods
-
-	Data
-For our study, we used RNA-seq data obtained after incubation of S. enterica strain 14028S with various novobiocin concentrations (0, 100 and 500 μg/ml) at different time points (10, 20 and 60 min) [1].
 
 	Data Preprocessing
 Reads were mapped onto the genome sequence of the Salmonella enterica subsp. enterica serovar Typhimurium strain 14028S assembly GCA_000022165.1 [2] using **HISAT2** version 2.1.0 [3]. For conversion BAM-formatted files into SAM-formatted files, we used **SAMtools** [4]. Code for data processing can be found in the *Code_for_alignment.sh* file.\
