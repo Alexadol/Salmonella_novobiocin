@@ -61,3 +61,7 @@ HISAT2 (version 2.1.0), SAMtools (version 1.9), R (version 3.0.1), additional R 
 8. https://www.ebi.ac.uk/QuickGO/
 9. Alexa A, Rahnenfuhrer J (2020). topGO: Enrichment Analysis for Gene Ontology. R package version 2.41.0.
 
+
+## Authors 
+
+A.Dolgikh, D.Mezhenskaya, A.Tkachenko 
