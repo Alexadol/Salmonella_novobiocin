@@ -1,7 +1,7 @@
 ## Analysis of differentially expressed genes in Salmonella enterica after novobiocin treatment
 
-*Salmonella enterica* is a bacterium known to cause salmonellosis. In enteric bacteria, DNA supercoiling is responsive to environmental conditions and different antibiotics can be used to relax supercoiling and alter the expression of supercoiling-sensitive genes. However, S. enterica shows significant resistance to **novobiocin** antibiotic and relatively small variability of supercoiling response.\
-Here we analyzed the novobiocin effect on S. enterica gene expression and tried to reveal different mechanisms of S. enterica antibiotic resistance and transcription-supercoiling coupling.\
+*Salmonella enterica* is a bacterium known to cause salmonellosis. In enteric bacteria, DNA supercoiling is responsive to environmental conditions and different antibiotics can be used to relax supercoiling and alter the expression of supercoiling-sensitive genes. However, *S. enterica* shows significant resistance to **novobiocin** antibiotic and relatively small variability of supercoiling response.\
+Here we analyzed the novobiocin effect on *S. enterica* gene expression and tried to reveal different mechanisms of *S. enterica* antibiotic resistance and transcription-supercoiling coupling.\
 	This repository contains data and code which were used for analysis. Description of code files and their output files briefly summarized in the **Table 1**.
 
 
@@ -12,8 +12,8 @@ For our study, we used RNA-seq data obtained after incubation of *Salmonella ent
 ## Methods
 
 	Data Preprocessing
-Reads were mapped onto the genome sequence of the Salmonella enterica subsp. enterica serovar Typhimurium strain 14028S assembly GCA_000022165.1 [2] using **HISAT2** version 2.1.0 [3]. For conversion BAM-formatted files into SAM-formatted files, we used **SAMtools** [4]. Code for data processing can be found in the *Code_for_alignment.sh* file.\
-Mapped sequencing reads to genomic features were assigned using **featureCounts** function (Rsubread package) [5]. 
+Reads were mapped onto the genome sequence of the *Salmonella enterica* subsp. enterica serovar Typhimurium strain 14028S assembly GCA_000022165.1 [2] using **HISAT2** version 2.1.0 [3]. For conversion of BAM-formatted files into SAM-formatted files, we used **SAMtools** [4]. Code for data processing can be found in the *Code_for_alignment.sh* file.\
+Mapped sequencing reads were assigned  to genomic features using **featureCounts** function (Rsubread package) [5]. 
 
 	Analysis of differentially expressed genes
 To perform analysis of differentially expressed genes we used R package **DESeq2** [6].\
@@ -23,7 +23,7 @@ Principal component analysis (PCA) was used to assess the variance between sampl
 We used **WoPPER** web server [7] for position-related data analysis of gene expression in prokaryotes. Tables with log2Foldchange were obtained after DESeq2 analysis and were used as an input.
 
 	GO enrichment analysis
-We also performed enrichment analysis in GO terms for differentially expressed genes. Since Salmonella enterica and especially this strain is non-model organism there was no available ready-to-use database with a mapping of gene names and GO-terms we created our own custom database. Web-server **Quick GO** [8] was used to retrieve data about mapping and the resulting database can be found as *Salmonella_enterica_14028S_gene_to_GO* file.\
+We also performed enrichment analysis in GO terms for differentially expressed genes. Since *Salmonella enterica* and especially this strain is a non-model organism there was no available ready-to-use database with a mapping of gene names and GO-terms and we created our own custom database. Web-server **Quick GO** [8] was used to retrieve data about mapping and the resulting database can be found as *Salmonella_enterica_14028S_gene_to_GO* file.\
 This database can be used for GO-enrichment analysis in **topGO package**  [9] and an example of the code for such analysis can be found in the *Enrichment_analysis_TopGO.r* file.
 
 	Clusterization using expression data
@@ -32,7 +32,7 @@ In order to identify gene clusters with similar expression dynamics in several t
 	Gene Set Enrichment Analysis (GSEA) and Over-Representation Analysis (ORA)
 To perform GSEA analysis R package **fgsea** was used. This package requires a list of ranked genes and a gmt file with gene sets. In our case, custom gene sets with converging and diverging genes were used. To create these sets and resulting gmt file we transformed GTF file which contains information about gene name, coordinates and strand were used and Python code for creating sets can be found in *Converging_diverging.ipynb* file.\
 Code for fgsea analysis can be found in the *FGSEA.r* file. It also contains code for visualization.
-Over-Representation analysis was used in order to determine if converging and diverging genes is enriched by genes from clusters which were received at the Clusterization step. We used a hypergeometric test and built-in R function **phyper** for this analysis. 
+Over-Representation analysis was used in order to determine if converging and diverging genes are enriched in genes from clusters which were obtained at the Clusterization step. We used a hypergeometric test and built-in R function **phyper** for this analysis. 
  
 	Software requirements
 HISAT2 (version 2.1.0), SAMtools (version 1.9), R (version 3.0.1), additional R packages (Rsubread, DESeq2, topGO, fgsea), Python3 (version > 3.6). 
