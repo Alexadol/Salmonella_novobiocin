@@ -13,7 +13,7 @@ For our study, we used RNA-seq data obtained after incubation of *Salmonella ent
 
 	Data Preprocessing
 Reads were mapped onto the genome sequence of the Salmonella enterica subsp. enterica serovar Typhimurium strain 14028S assembly GCA_000022165.1 [2] using **HISAT2** version 2.1.0 [3]. For conversion BAM-formatted files into SAM-formatted files, we used **SAMtools** [4]. Code for data processing can be found in the *Code_for_alignment.sh* file.\
-Mapped sequencing reads to genomic features were assigned using **featureCounts** function (Rsubread package) [5]. Code for this step can be found in the *Feature_counts.r* file and this file contains commands which should be implemented in R.
+Mapped sequencing reads to genomic features were assigned using **featureCounts** function (Rsubread package) [5]. 
 
 	Analysis of differentially expressed genes
 To perform analysis of differentially expressed genes we used R package **DESeq2** [6].\
@@ -42,7 +42,6 @@ HISAT2 (version 2.1.0), SAMtools (version 1.9), R (version 3.0.1), additional R 
 | Method | Code File  | Output Files |
 | :---:  | :---:  | :---:  |
 | Data Preprocessing  | Code_for_alignment.sh | Set of bam files which can be used for featureCounts |
-| Reads assignment | Feature_counts.r | Tables with raw counts |
 | Differential expression | FGSEA.r, topGO_enrichment.r, Clusterization.r | Visualization of data |
 | Gene Ontology  |Web-server Quick GO  | Table with gene to GO mapping which can be used as data for creating gene2GO or GO2gene files for topGO |
 | GO-enrichment analysis | Enrichment_analysis_TopGO.r | Enrichment of differentially expressed genes by genes associated with different biological processes in GO-terms and plots for visualization of these data |
