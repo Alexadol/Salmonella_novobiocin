@@ -42,7 +42,7 @@ HISAT2 (version 2.1.0), SAMtools (version 1.9), R (version 3.0.1), additional R 
 | Method | Code File  | Output Files |
 | :---:  | :---:  | :---:  |
 | Data Preprocessing  | Code_for_alignment.sh | Set of bam files which can be used for featureCounts |
-| Differential expression | FGSEA.r, topGO_enrichment.r, Clusterization.r | Visualization of data |
+| Differential expression | FGSEA.r, topGO_enrichment.r, Clusterization.r | In each file there is code to produce tables with results of DEG analysis in DESeq2 |
 | Gene Ontology  |Web-server Quick GO  | Table with gene to GO mapping which can be used as data for creating gene2GO or GO2gene files for topGO |
 | GO-enrichment analysis | Enrichment_analysis_TopGO.r | Enrichment of differentially expressed genes by genes associated with different biological processes in GO-terms and plots for visualization of these data |
 | Clusterization | Сlusterization.r | Sets of genes with similar expression dynamics and plots for visualization of these data |
