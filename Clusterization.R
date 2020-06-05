@@ -59,7 +59,7 @@ kClustcentroids <- sapply(levels(factor(kClusters)), clust.centroid, scaledata_m
 kClustcentroids_with <- kClustcentroids[c(1,6,7,8,5),]
 
 #Change names of points in which genes within clusters have similar expression dinamics
-rownames(kClustcentroids_with) <- c ('0 minutes','10 minutes novobiocin 500 mkg','20 minutes nocobiocin 500 mkg','60 minutes nocobiocin 500 mkg','60 minutes nocobiocin 100 mkg')
+rownames(kClustcentroids_with) <- c ('0 minutes','10 minutes novobiocin 500 mkg','20 minutes novobiocin 500 mkg','60 minutes novobiocin 500 mkg','60 minutes novobiocin 100 mkg')
 
 library(ggplot2)
 library(reshape)
@@ -67,7 +67,7 @@ library(reshape)
 Kmolten <- melt(kClustcentroids_with)
 colnames(Kmolten) <- c('sample','cluster','value')
 
-#Creating plot to assess dinamics of genes within clusters
+#Creating plot to assess dynamics of genes within clusters
 p1 <- ggplot(Kmolten, aes(x=sample,y=value, group=cluster, colour=as.factor(cluster))) + 
   geom_point() + 
   geom_line() +
