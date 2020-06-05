@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#MAKE SURE THAT HISAT2 AND SAMTOOLS IS INSTALLED 
+#MAKE SURE THAT HISAT2 AND SAMTOOLS ARE INSTALLED 
 
 #You should create directory with all files with reads which should be aligned at the genome
 PATH_TO_READS='./Reads/*'
@@ -9,7 +9,7 @@ mkdir SAM_GenBank
 mkdir BAM_GenBank
 mkdir SORTED_BAM_GenBank
 
-#Further command can be used for creating genome index. If you need to create this - uncomment further row and make sure that genome file is in the directory where script is launched
+#The following command can be used for creating genome index. If you need to create it - uncomment the next row and make sure that genome file is in the directory where script is launched
 #hisat2-build Salmonella_genome.fasta Salmonella_genome_gb 
 
 
