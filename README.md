@@ -39,7 +39,7 @@ HISAT2 (version 2.1.0), SAMtools (version 1.9), R (version 3.0.1), additional R 
 
 	Table 1. A brief summary of code files and their output files.
 
-| Method | Code File  | Output Files |
+| Method | Code File or tool | Output Files |
 | :---:  | :---:  | :---:  |
 | Data Preprocessing  | Code_for_alignment.sh | Set of bam files which can be used for featureCounts |
 | Differential expression | FGSEA.r, topGO_enrichment.r, Clusterization.r | In each file there is code to produce tables with results of DEG analysis in DESeq2 |
