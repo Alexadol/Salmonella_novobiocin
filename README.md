@@ -46,7 +46,7 @@ HISAT2 (version 2.1.0), SAMtools (version 1.9), R (version 3.0.1), additional R 
 | Gene Ontology  |Web-server Quick GO  | Table with gene to GO mapping which can be used as data for creating gene2GO or GO2gene files for topGO |
 | GO-enrichment analysis | Enrichment_analysis_TopGO.r | Enrichment of differentially expressed genes by genes associated with different biological processes in GO-terms and plots for visualization of these data |
 | Clusterization | Сlusterization.r | Sets of genes with similar expression dynamics and plots for visualization of these data |
-| GSEA | Converging_diverging.ipynb, FGSEA.r | Sets of converging and diverging genes and plots for visualization of these data |
+| GSEA | FGSEA.r | Table with result of GSEA analysis and plots for visualization of enrichment data |
 
 
 ## References:
