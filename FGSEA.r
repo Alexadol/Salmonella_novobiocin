@@ -12,7 +12,7 @@ res_with <- read.csv('fc_res_with.csv',sep=' ') #with antibiotic
 res_wo <- read.csv('fc_res_wo.csv',sep=' ') #without
 res_full <- cbind(res_wo,res_with)
 
-#adding FAKE 3 columns with zero (as zero treatment) for making groups equal
+#adding FAKE 3 columns with zero (as zero treatment) to make groups equal
 fake_zero_treat <- res_full[,c(1,2,3)]
 colnames(fake_zero_treat)<- c('fakewith_0_1','fakewith_0_2','fakewith_0_3')
 res_full_new <- cbind(fake_zero_treat,res_full)
