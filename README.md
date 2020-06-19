@@ -48,6 +48,15 @@ HISAT2 (version 2.1.0), SAMtools (version 1.9), R (version 3.0.1), additional R 
 | Clusterization | Сlusterization.r | Sets of genes with similar expression dynamics and plots for visualization of these data |
 | GSEA | FGSEA.r | Table with result of GSEA analysis and plots for visualization of enrichment data |
 
+## Results:
+
+1) We found that gene expression patterns have become mosaic after novobiocin treatment.
+2) Functional enrichment analysis in GO terms revealed expression changes in groups of genes associated with branch-chain amino acid biosynthesis that can be connected to the regulation of Salmonella pathogenicity island 2.
+3) K-means clusterization of co-expressed genes revealed the upregulation of two clusters at different time stages after antibiotic treatment.
+4) Gene expression analysis revealed significant changes in the gene expression patterns of S. enterica after novobiocin treatment that can be connected to pathogenicity and transcription-supercoiling coupling.
+
+Detailed results are available in Results.pdf
+
 
 ## References:
 1. Gogoleva, N. E., Konnova, T. A., Balkin, A. S., Plotnikov, A. O., & Gogolev, Y. V. (2020). Transcriptomic data of Salmonella enterica subsp. enterica serovar Typhimurium str. 14028S treated with novobiocin. Data in Brief, 29, 105297.
